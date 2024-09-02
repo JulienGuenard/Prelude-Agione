@@ -47,7 +47,6 @@ public class MenuManager : MonoBehaviour
 
     public void NarrativeStart(int id)
     {
-        menuCurrent.SetActive(false);
         TooltipManager.instance.HideTooltips();
         NarrativeManager.instance.StartNarrative(id);
         mangaPanelGMB.SetActive(true);
@@ -55,7 +54,6 @@ public class MenuManager : MonoBehaviour
 
     public void NarrativeStop()
     {
-        menuCurrent.SetActive(false);
         TooltipManager.instance.HideTooltips();
         NarrativeManager.instance.StopNarrative();
         mangaPanelGMB.SetActive(false);
