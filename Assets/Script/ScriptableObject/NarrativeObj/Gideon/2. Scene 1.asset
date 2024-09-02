@@ -1,0 +1,38 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3e4ced9710f77d54e833e2d0fa36da2c, type: 3}
+  m_Name: 2. Scene 1
+  m_EditorClassIdentifier: 
+  sceneNarrative: {fileID: 1871570201801903723, guid: a9fa2f3fe4c6dca4a828ade94a9ef2ef, type: 3}
+  dialogList:
+  - txt: Qu... Quoi !? Je suis le personnage principal de l'histoire !?
+    dialogVoicePreset: {fileID: 11400000, guid: cfcc492951df4654e81062053285d826, type: 2}
+    sfx: {fileID: 0}
+    speed: 0
+    pitch: 0
+    pitchRand: 0
+    spaceDelay: 0
+    virguleDelay: 0
+    pointDelay: 0
+    bubbleDelay: 0
+    hideNumber: 1
+  - txt: "Salut ! Moi c'est Gid\xE9on."
+    dialogVoicePreset: {fileID: 11400000, guid: 2899edd57bd78c548acd6d00dc78460d, type: 2}
+    sfx: {fileID: 0}
+    speed: 0
+    pitch: 0
+    pitchRand: 0
+    spaceDelay: 0
+    virguleDelay: 0
+    pointDelay: 0
+    bubbleDelay: 0
+    hideNumber: 0

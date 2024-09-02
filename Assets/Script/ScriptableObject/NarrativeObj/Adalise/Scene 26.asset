@@ -1,0 +1,61 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3e4ced9710f77d54e833e2d0fa36da2c, type: 3}
+  m_Name: Scene 26
+  m_EditorClassIdentifier: 
+  sceneNarrative: {fileID: 9069899236204511095, guid: 45f2b8979a76bf844aacaac18542dbe6, type: 3}
+  dialogList:
+  - txt: Roh allez !
+    dialogVoicePreset: {fileID: 11400000, guid: 6260fc60c303a1341a955f7ea54793ce, type: 2}
+    sfx: {fileID: 0}
+    speed: 0
+    pitch: 0
+    pitchRand: 0
+    spaceDelay: 0
+    virguleDelay: 0
+    pointDelay: 0
+    bubbleDelay: 0
+    hideNumber: 0
+  - txt: Tu sais bien que c'est mal vu qu'un gamin des rues comme moi accompagne
+      une princesse !
+    dialogVoicePreset: {fileID: 11400000, guid: 2899edd57bd78c548acd6d00dc78460d, type: 2}
+    sfx: {fileID: 0}
+    speed: 0
+    pitch: 0
+    pitchRand: 0
+    spaceDelay: 0
+    virguleDelay: 0
+    pointDelay: 0
+    bubbleDelay: 0
+    hideNumber: 0
+  - txt: "Ton fr\xE8re me d\xE9teste !"
+    dialogVoicePreset: {fileID: 11400000, guid: 2899edd57bd78c548acd6d00dc78460d, type: 2}
+    sfx: {fileID: 0}
+    speed: 0
+    pitch: 0
+    pitchRand: 0
+    spaceDelay: 0
+    virguleDelay: 0
+    pointDelay: 0
+    bubbleDelay: 0
+    hideNumber: 0
+  - txt: Et puis ces monstres de maudits me terrorisent ...
+    dialogVoicePreset: {fileID: 11400000, guid: 2899edd57bd78c548acd6d00dc78460d, type: 2}
+    sfx: {fileID: 0}
+    speed: 0
+    pitch: 0
+    pitchRand: 0
+    spaceDelay: 0
+    virguleDelay: 0
+    pointDelay: 0
+    bubbleDelay: 0
+    hideNumber: 0

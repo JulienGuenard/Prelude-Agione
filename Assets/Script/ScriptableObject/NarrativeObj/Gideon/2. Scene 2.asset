@@ -1,0 +1,60 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3e4ced9710f77d54e833e2d0fa36da2c, type: 3}
+  m_Name: 2. Scene 2
+  m_EditorClassIdentifier: 
+  sceneNarrative: {fileID: 8794737684408093538, guid: 0cf317e104fbf2047bee7066781df8a4, type: 3}
+  dialogList:
+  - txt: L'autre jour...
+    dialogVoicePreset: {fileID: 11400000, guid: 2899edd57bd78c548acd6d00dc78460d, type: 2}
+    sfx: {fileID: 0}
+    speed: 0
+    pitch: 0
+    pitchRand: 0
+    spaceDelay: 0
+    virguleDelay: 0
+    pointDelay: 0
+    bubbleDelay: 0
+    hideNumber: 0
+  - txt: "J'ai ramass\xE9 une tr\xE8s jolie pierre, elle est faites en rochelune."
+    dialogVoicePreset: {fileID: 11400000, guid: 2899edd57bd78c548acd6d00dc78460d, type: 2}
+    sfx: {fileID: 0}
+    speed: 0
+    pitch: 0
+    pitchRand: 0
+    spaceDelay: 0
+    virguleDelay: 0
+    pointDelay: 0
+    bubbleDelay: 0
+    hideNumber: 1
+  - txt: Comme toi !
+    dialogVoicePreset: {fileID: 11400000, guid: 2899edd57bd78c548acd6d00dc78460d, type: 2}
+    sfx: {fileID: 0}
+    speed: 0
+    pitch: 0
+    pitchRand: 0
+    spaceDelay: 0
+    virguleDelay: 0
+    pointDelay: 0
+    bubbleDelay: 0
+    hideNumber: 1
+  - txt: '!!'
+    dialogVoicePreset: {fileID: 11400000, guid: 0488bc873a259bb4788acedaff5e0190, type: 2}
+    sfx: {fileID: 0}
+    speed: 0
+    pitch: 0
+    pitchRand: 0
+    spaceDelay: 0
+    virguleDelay: 0
+    pointDelay: 0
+    bubbleDelay: 0
+    hideNumber: 0

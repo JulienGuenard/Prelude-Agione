@@ -1,0 +1,71 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3e4ced9710f77d54e833e2d0fa36da2c, type: 3}
+  m_Name: Scene 18
+  m_EditorClassIdentifier: 
+  sceneNarrative: {fileID: 3811595120192676960, guid: 1a5f95ddfd0854744a2371331d282192, type: 3}
+  dialogList:
+  - txt: "\xE7a doit bien faire plusieurs heures..."
+    dialogVoicePreset: {fileID: 11400000, guid: 2899edd57bd78c548acd6d00dc78460d, type: 2}
+    sfx: {fileID: 0}
+    speed: 0
+    pitch: 0
+    pitchRand: 0
+    spaceDelay: 0
+    virguleDelay: 0
+    pointDelay: 0
+    bubbleDelay: 0
+    hideNumber: 1
+  - txt: Avez-vous vu la princesse ?
+    dialogVoicePreset: {fileID: 11400000, guid: 04267db91c5b0f3409b2e52310f17ae1, type: 2}
+    sfx: {fileID: 0}
+    speed: 0
+    pitch: 0
+    pitchRand: 0
+    spaceDelay: 0
+    virguleDelay: 0
+    pointDelay: 0
+    bubbleDelay: 0
+    hideNumber: 1
+  - txt: "J'ai cherch\xE9 \xE0 diff\xE9rents endroits avant de te trouver l\xE0."
+    dialogVoicePreset: {fileID: 11400000, guid: 2899edd57bd78c548acd6d00dc78460d, type: 2}
+    sfx: {fileID: 0}
+    speed: 0
+    pitch: 0
+    pitchRand: 0
+    spaceDelay: 0
+    virguleDelay: 0
+    pointDelay: 0
+    bubbleDelay: 0
+    hideNumber: 0
+  - txt: Adalise ?
+    dialogVoicePreset: {fileID: 11400000, guid: 2899edd57bd78c548acd6d00dc78460d, type: 2}
+    sfx: {fileID: 0}
+    speed: 0
+    pitch: 0
+    pitchRand: 0
+    spaceDelay: 0
+    virguleDelay: 0
+    pointDelay: 0
+    bubbleDelay: 0
+    hideNumber: 0
+  - txt: Adalise ?
+    dialogVoicePreset: {fileID: 11400000, guid: 2899edd57bd78c548acd6d00dc78460d, type: 2}
+    sfx: {fileID: 0}
+    speed: 0
+    pitch: 0
+    pitchRand: 0
+    spaceDelay: 0
+    virguleDelay: 0
+    pointDelay: 0
+    bubbleDelay: 0
+    hideNumber: 0

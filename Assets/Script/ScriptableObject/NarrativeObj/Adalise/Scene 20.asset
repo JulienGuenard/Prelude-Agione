@@ -1,0 +1,82 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3e4ced9710f77d54e833e2d0fa36da2c, type: 3}
+  m_Name: Scene 20
+  m_EditorClassIdentifier: 
+  sceneNarrative: {fileID: 1130988422690315332, guid: d241c8dc436ce084a914cd2f8c56a11e, type: 3}
+  dialogList:
+  - txt: Tiens ?
+    dialogVoicePreset: {fileID: 11400000, guid: d7f98627c2164d549be68534b23c1bdd, type: 2}
+    sfx: {fileID: 0}
+    speed: 0
+    pitch: 0
+    pitchRand: 0
+    spaceDelay: 0
+    virguleDelay: 0
+    pointDelay: 0
+    bubbleDelay: 0
+    hideNumber: 0
+  - txt: C'est elle...
+    dialogVoicePreset: {fileID: 11400000, guid: d7f98627c2164d549be68534b23c1bdd, type: 2}
+    sfx: {fileID: 0}
+    speed: 0
+    pitch: 0
+    pitchRand: 0
+    spaceDelay: 0
+    virguleDelay: 0
+    pointDelay: 0
+    bubbleDelay: 0
+    hideNumber: 0
+  - txt: C'est la Princesse Cadavre !
+    dialogVoicePreset: {fileID: 11400000, guid: 63a0b4e9707bae54c9e650650a45fc69, type: 2}
+    sfx: {fileID: 0}
+    speed: 0
+    pitch: 0
+    pitchRand: 0
+    spaceDelay: 0
+    virguleDelay: 0
+    pointDelay: 0
+    bubbleDelay: 0
+    hideNumber: 0
+  - txt: Ne la regarde pas !
+    dialogVoicePreset: {fileID: 11400000, guid: 6b028996984f9e841b755851ee126883, type: 2}
+    sfx: {fileID: 0}
+    speed: 0
+    pitch: 0
+    pitchRand: 0
+    spaceDelay: 0
+    virguleDelay: 0
+    pointDelay: 0
+    bubbleDelay: 0
+    hideNumber: 0
+  - txt: Elle n'est pas normale...
+    dialogVoicePreset: {fileID: 11400000, guid: 68b7bfd5c20c7f841b1f56d7dd855685, type: 2}
+    sfx: {fileID: 0}
+    speed: 0
+    pitch: 0
+    pitchRand: 0
+    spaceDelay: 0
+    virguleDelay: 0
+    pointDelay: 0
+    bubbleDelay: 0
+    hideNumber: 0
+  - txt: "Que M\xFCne nous prot\xE8ge..."
+    dialogVoicePreset: {fileID: 11400000, guid: c8e945225cc4cb54fb63c4150c0f6ad8, type: 2}
+    sfx: {fileID: 0}
+    speed: 0
+    pitch: 0
+    pitchRand: 0
+    spaceDelay: 0
+    virguleDelay: 0
+    pointDelay: 0
+    bubbleDelay: 0
+    hideNumber: 0
