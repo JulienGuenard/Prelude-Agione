@@ -22,8 +22,6 @@ public class SaveManager : MonoBehaviour
     }
     private void Update()
     {
-        if (Input.GetKeyDown(KeyCode.H)) SaveReset();
-
         CheckUnlockNarrative();
         CheckSave();
     }
@@ -32,8 +30,17 @@ public class SaveManager : MonoBehaviour
     {
         foreach (Unlock unlock in unlockList)
         {
-            if (NarrativeManager.instance.storyID != unlock.narrativeUnlock.storyID) return;
-            if (NarrativeManager.instance.narrativeID != unlock.narrativeUnlock.narrativeID) return;
+            if (NarrativeManager.instance.storyID != unlock.narrativeUnlock.storyID) continue;
+            if (NarrativeManager.instance.narrativeID != unlock.narrativeUnlock.narrativeID) continue;
+
+            SetInt(unlock.saveName, 1);
+        }
+    }
+    public void CheckUnlockAdaliseGame(int id)
+    {
+        foreach (Unlock unlock in unlockList)
+        {
+            if (unlock.adaliseGameUnlock > id || unlock.adaliseGameUnlock == 0) continue;
 
             SetInt(unlock.saveName, 1);
         }
@@ -56,7 +63,6 @@ public class SaveManager : MonoBehaviour
     }
     private void SaveSetup()
     {
-        PlayerPrefs.DeleteAll();
         foreach (Unlock unlock in unlockList) if (!PlayerPrefs.HasKey(unlock.saveName)) SetInt(unlock.saveName, 0);
     }
 

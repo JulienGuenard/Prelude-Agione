@@ -14,6 +14,9 @@ public class TooltipManager : MonoBehaviour
     public GameObject tooltipGMB_2;
     public TextMeshPro tooltipGMB_2_title, tooltipGMB_2_text;
 
+    public GameObject tooltipGMB_3;
+    public TextMeshPro tooltipGMB_3_title, tooltipGMB_3_text;
+
     #region instance
     public static TooltipManager instance;
 
@@ -26,14 +29,16 @@ public class TooltipManager : MonoBehaviour
     {
         HideTooltips();
         if (text.Length < 2) ShowTooltip(title, text, tooltipGMB_0, tooltipGMB_0_title, tooltipGMB_0_text);
-        else if (text.Length < 100) ShowTooltip(title, text, tooltipGMB_1, tooltipGMB_1_title, tooltipGMB_1_text);
-        else ShowTooltip(title, text, tooltipGMB_2, tooltipGMB_2_title, tooltipGMB_2_text);
+        else if (text.Length < 60) ShowTooltip(title, text, tooltipGMB_1, tooltipGMB_1_title, tooltipGMB_1_text);
+        else if (text.Length < 120) ShowTooltip(title, text, tooltipGMB_2, tooltipGMB_2_title, tooltipGMB_2_text);
+        else ShowTooltip(title, text, tooltipGMB_3, tooltipGMB_3_title, tooltipGMB_3_text);
     }
     public void HideTooltips()
     {
         tooltipGMB_0.SetActive(false);
         tooltipGMB_1.SetActive(false);
         tooltipGMB_2.SetActive(false);
+        tooltipGMB_3.SetActive(false);
     }
 
     private void ShowTooltip(string title, string text, GameObject gmb, TextMeshPro tooltipTitle, TextMeshPro tooltipText)

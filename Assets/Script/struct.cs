@@ -16,5 +16,6 @@ using UnityEngine;
 {
     public string saveName;
     public NarrativeUnlock narrativeUnlock;
+    public int adaliseGameUnlock;
     public GameObject btn_on, btn_off;
 }
