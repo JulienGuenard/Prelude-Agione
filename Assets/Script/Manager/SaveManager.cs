@@ -63,6 +63,7 @@ public class SaveManager : MonoBehaviour
     private void SetInt(string KeyName, int Value)
     {
         PlayerPrefs.SetInt(KeyName, Value);
+        PlayerPrefs.Save();
     }
     private int GetInt(string KeyName)
     {

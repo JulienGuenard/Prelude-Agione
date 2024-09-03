@@ -586,7 +586,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &73958167
 Transform:
   m_ObjectHideFlags: 0
@@ -664,7 +664,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   menuGMB: {fileID: 1747360239}
   musicFadeOut: 0
-  musicFadeIn: 0
+  musicFadeIn: 1
 --- !u!114 &73958170
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -9173,7 +9173,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &837738670
 Transform:
   m_ObjectHideFlags: 0
@@ -16569,7 +16569,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1311981247
 Transform:
   m_ObjectHideFlags: 0
@@ -17541,7 +17541,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   menuGMB: {fileID: 1765895351}
-  musicFadeOut: 0
+  musicFadeOut: 1
   musicFadeIn: 0
 --- !u!61 &1386667283
 BoxCollider2D:
@@ -22063,7 +22063,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   screenFade: {fileID: 593308734}
-  menuCurrent: {fileID: 1311981246}
+  menuCurrent: {fileID: 1765895351}
   previousGMB: {fileID: 0}
   mangaPanelGMB: {fileID: 1009172607}
   menuOption: {fileID: 1868085271}
@@ -24320,6 +24320,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1747360240}
+  - component: {fileID: 1747360241}
   m_Layer: 0
   m_Name: MenuGalerie
   m_TagString: Untagged
@@ -24356,6 +24357,19 @@ Transform:
   m_Father: {fileID: 1422093529}
   m_RootOrder: -1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1747360241
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1747360239}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 51a62b6b1b438ce4587a2503294291d2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  clipOnEnable: {fileID: 8300000, guid: 0b434fb6ffde23b4d84e2cbcb8008769, type: 3}
 --- !u!21 &1749059302
 Material:
   serializedVersion: 8
@@ -24650,7 +24664,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &1765895352
 Transform:
   m_ObjectHideFlags: 0

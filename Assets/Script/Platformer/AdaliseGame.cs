@@ -28,6 +28,10 @@ public class AdaliseGame : MonoBehaviour
     void Awake()
     {
         if (instance == null) instance = this;
+
+        if (!PlayerPrefs.HasKey("Highscore")) return;
+
+        highscore = PlayerPrefs.GetInt("Highscore", highscore);
     }
     #endregion
 
@@ -66,11 +70,11 @@ public class AdaliseGame : MonoBehaviour
     {
         if (highscore > score) return;
 
+        PlayerPrefs.SetInt("Highscore", highscore);
+        PlayerPrefs.Save();
         highscore = score;
         highscoreMesh.text = "Best : " + highscore.ToString();
     }
-
-
 
     void CreateEdrelin()
     {

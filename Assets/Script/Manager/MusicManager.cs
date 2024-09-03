@@ -22,7 +22,7 @@ public class MusicManager : MonoBehaviour
 
     private void Start()
     {
-        snapFadeIn.TransitionTo(0.01f);
+        snapFadeOut.TransitionTo(0.01f);
     }
 
     public void OptionSlider_VolumeSFX(Slider slider)
@@ -41,7 +41,7 @@ public class MusicManager : MonoBehaviour
 
     public void Btn_MixerIn()
     {
-        snapFadeIn.TransitionTo(1f);
+        snapFadeIn.TransitionTo(1.75f);
     }
     public void Btn_MixerOut()
     {

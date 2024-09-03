@@ -74,6 +74,12 @@ public class NarrativeManager : MonoBehaviour
         narrativeID = 0;
         IsPlayed = false;
         StopAllCoroutines();
+        StartCoroutine(StopNarrativeDelay());
+    }
+
+    IEnumerator StopNarrativeDelay()
+    {
+        yield return new WaitForSeconds(1f);
         Destroy(sceneNarrativeGMB);
     }
 
