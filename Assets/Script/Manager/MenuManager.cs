@@ -36,9 +36,13 @@ public class MenuManager : MonoBehaviour
         NarrativeManager.instance.StopNarrative();
         mangaPanelGMB.SetActive(false);
     }
-    public void Btn_Options()
+    public void BtnCanvas_ShowOptions()
     {
         menuOption.SetActive(!menuOption.activeInHierarchy);
+    }
+    public void BtnCanvas_SwitchFullscreen()
+    {
+        Screen.fullScreen = !Screen.fullScreen;
     }
 
     public void Fade_ChangeMenu(GameObject menuGMB)

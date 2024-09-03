@@ -1,6 +1,5 @@
 using System.Collections;
 using System.Collections.Generic;
-using System.Drawing;
 using TMPro;
 using UnityEngine;
 
@@ -203,11 +202,7 @@ public class NarrativeManager : MonoBehaviour
         screenFade.SetBool("Fade", false);
     }
 
-    public void Fullscreen()
-    {
-        Screen.fullScreen = !Screen.fullScreen;
-    }
-    public void Play(bool state) { IsPlayed = state; }
+    public void BtnCanvas_NarrativeAutoPlay(bool state) { IsPlayed = state; }
 }
 
 

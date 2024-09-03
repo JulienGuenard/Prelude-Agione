@@ -3028,7 +3028,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 1635213828}
         m_TargetAssemblyTypeName: NarrativeManager, Assembly-CSharp
-        m_MethodName: Play
+        m_MethodName: BtnCanvas_NarrativeAutoPlay
         m_Mode: 6
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -8329,9 +8329,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1635213828}
-        m_TargetAssemblyTypeName: NarrativeManager, Assembly-CSharp
-        m_MethodName: Fullscreen
+      - m_Target: {fileID: 1635213831}
+        m_TargetAssemblyTypeName: MenuManager, Assembly-CSharp
+        m_MethodName: BtnCanvas_SwitchFullscreen
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -16151,7 +16151,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 1635213828}
         m_TargetAssemblyTypeName: NarrativeManager, Assembly-CSharp
-        m_MethodName: Play
+        m_MethodName: BtnCanvas_NarrativeAutoPlay
         m_Mode: 6
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -16377,6 +16377,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   storyID: 0
+  narrativeID: 0
   isPlayed: 0
   playGMB: {fileID: 1629858419}
   pauseGMB: {fileID: 427787280}
@@ -16419,36 +16420,6 @@ MonoBehaviour:
   - {fileID: 11400000, guid: e138cf6b460661448b4416254bc9cd54, type: 2}
   - {fileID: 11400000, guid: ff97931481a7a234882700a0fb99b7e3, type: 2}
   - {fileID: 11400000, guid: b635bb812fea57d4d96514a82d5eda11, type: 2}
-  narrativeObjList:
-  - {fileID: 11400000, guid: b4801b2ce26ae684994f05ec921cb2d3, type: 2}
-  - {fileID: 11400000, guid: 563ea69ccdbd56645ae4897d1588b260, type: 2}
-  - {fileID: 11400000, guid: fec7408d9ba7b3d4eb09fe11b9ef2c89, type: 2}
-  - {fileID: 11400000, guid: bf66e1fcbe073084ab0e7951787fb339, type: 2}
-  - {fileID: 11400000, guid: 28a84591fa828ec429ec5e0822aa54ff, type: 2}
-  - {fileID: 11400000, guid: bf6ec2ee011a20a44ba8c48fb122e27c, type: 2}
-  - {fileID: 11400000, guid: 06564fb294500634eaf9d0ed42e792d7, type: 2}
-  - {fileID: 11400000, guid: f5b2196f5e08c384f91b6d79a5f022de, type: 2}
-  - {fileID: 11400000, guid: 8383dc12717f02647b6640639d26e548, type: 2}
-  - {fileID: 11400000, guid: 6e8518570a2161a47a38ef0224e4fe02, type: 2}
-  - {fileID: 11400000, guid: 18590f40ac6c5ae4c97db03cdf868807, type: 2}
-  - {fileID: 11400000, guid: f6f17d1cd8ba5a643af4a9012aafdbf5, type: 2}
-  - {fileID: 11400000, guid: 0a90c4623b158824782a9f6049900fd6, type: 2}
-  - {fileID: 11400000, guid: 08ba004aa25d26445be7e8cf58b132e1, type: 2}
-  - {fileID: 11400000, guid: ce6ef7be84c3a1a488c12678f5fe9baa, type: 2}
-  - {fileID: 11400000, guid: b1c3a68a6e8621346a70dd5814d36f7f, type: 2}
-  - {fileID: 11400000, guid: eb895b3ae8bd81948b8da4ae6bfb0c9d, type: 2}
-  - {fileID: 11400000, guid: e382ece0f15efca44b3fca919cf45572, type: 2}
-  - {fileID: 11400000, guid: 8b9bbc839cc0aec468b33103f4234776, type: 2}
-  - {fileID: 11400000, guid: 0e390794d9ff96f4db2f8e31b00700c2, type: 2}
-  - {fileID: 11400000, guid: 7fc31f87f3731a34fb17d3ba0db7e6ff, type: 2}
-  - {fileID: 11400000, guid: 654c1f269f214784d87ee439a181f73c, type: 2}
-  - {fileID: 11400000, guid: aac096672100670478c1e7fba697e365, type: 2}
-  - {fileID: 11400000, guid: ca1419520a1714c41b7442c9efd94164, type: 2}
-  - {fileID: 11400000, guid: 0d8dd12a08dcb2a44aa3d8d6e98928c4, type: 2}
-  - {fileID: 11400000, guid: ba2600b221196804e8418bad815916ef, type: 2}
-  - {fileID: 11400000, guid: 67d324098435bee4694ad33f5ea9aec3, type: 2}
-  - {fileID: 11400000, guid: dac2211220143d0489b9cba3b76fbda8, type: 2}
-  narrativeID: 0
 --- !u!4 &1635213829
 Transform:
   m_ObjectHideFlags: 0
@@ -20332,7 +20303,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 1635213831}
         m_TargetAssemblyTypeName: MenuManager, Assembly-CSharp
-        m_MethodName: Options
+        m_MethodName: BtnCanvas_ShowOptions
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}

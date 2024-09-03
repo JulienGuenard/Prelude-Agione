@@ -9,7 +9,7 @@ public class Tooltip : MonoBehaviour
 
     public void OnMouseEnter()
     {
-        TooltipManager.instance.Tooltip(title, text);
+        TooltipManager.instance.Btn_ShowTooltip(title, text);
     }
 
     public void OnMouseExit()
