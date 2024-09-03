@@ -12,6 +12,8 @@ public class BubbleMachineManager : MonoBehaviour
     public List<AudioClip> audioCliplist;
     private AudioClip audioClipCurrent;
 
+    bool isAlterned = false;
+
     #region instance
     public static BubbleMachineManager instance;
 
@@ -23,26 +25,30 @@ public class BubbleMachineManager : MonoBehaviour
 
     private void Start()
     {
-        Droplist_ChangeSFX(0);
+        audioClipCurrent = audioCliplist[0];
     }
 
     public void Btn_CreateBubble()
     {
-        Vector3 pos = new Vector3(14, -8, 0);
-        GameObject obj = Instantiate(bubbleGMB, pos, Quaternion.identity);
-        StartCoroutine(WriteBubble(obj));
-        StartCoroutine(DestroyBubble(obj));
-    }
+        Vector3 pos = new Vector3(Random.Range(14, 21), -11, 0);
+        if (isAlterned) pos = new Vector3(Random.Range(0, 8), -11, 0);
 
-    public void Droplist_ChangeSFX(int id)
+        GameObject obj = Instantiate(bubbleGMB, pos, Quaternion.identity);
+
+        isAlterned = !isAlterned;
+
+        StartCoroutine(WriteBubble(obj));
+    }
+    public void Droplist_ChangeSFX(TMP_Dropdown drop)
     {
-        audioClipCurrent = audioCliplist[id];
+        audioClipCurrent = audioCliplist[drop.value];
     }
 
     IEnumerator WriteBubble(GameObject obj)
     {
         TextMeshPro txtmesh = obj.gameObject.GetComponentInChildren<TextMeshPro>();
-        
+        SpriteRenderer spriteR = obj.gameObject.GetComponentInChildren<SpriteRenderer>();
+        spriteR.flipX = !isAlterned;
 
         string txt = textM.text;
         txtmesh.text = txt.Insert(0, "<color=#00000000>");
@@ -90,11 +96,18 @@ public class BubbleMachineManager : MonoBehaviour
 
             MusicManager.instance.sfxAudio.PlayOneShot(sfx);
         }
-    }
 
-    IEnumerator DestroyBubble(GameObject obj)
+        StartCoroutine(DestroyBubble(obj, txtmesh, spriteR));
+    }
+    IEnumerator DestroyBubble(GameObject obj, TextMeshPro txtmesh, SpriteRenderer spriteR)
     {
         yield return new WaitForSeconds(2f);
+        for(int i = 1; i < 100; i++)
+        {
+            yield return new WaitForSeconds(0.01f);
+            spriteR.color -= new Color(0, 0, 0, 0.01f);
+            txtmesh.color -= new Color(0, 0, 0, 0.01f);
+        }
         Destroy(obj);
     }
 }

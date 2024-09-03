@@ -6,6 +6,7 @@ using UnityEngine.UI;
 
 public class MusicManager : MonoBehaviour
 {
+    public AudioSource musicAudio;
     public AudioSource sfxAudio;
     public List<AudioSource> musicAudioList;
     public AudioMixerSnapshot snapFadeIn, snapFadeOut;
