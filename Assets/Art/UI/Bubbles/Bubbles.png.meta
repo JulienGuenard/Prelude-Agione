@@ -131,7 +131,7 @@ TextureImporter:
         width: 334
         height: 497
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -139,6 +139,27 @@ TextureImporter:
       bones: []
       spriteID: 14444ceb496c5d942be50dea10f170d6
       internalID: 806489802
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bubbles_1
+      rect:
+        serializedVersion: 2
+        x: 883
+        y: 823
+        width: 445
+        height: 540
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 44f46c314d249ff4e83cdc1203f17f9a
+      internalID: 1444162022
       vertices: []
       indices: 
       edges: []
@@ -155,6 +176,7 @@ TextureImporter:
     secondaryTextures: []
     nameFileIdTable:
       Bubbles_0: 806489802
+      Bubbles_1: 1444162022
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
