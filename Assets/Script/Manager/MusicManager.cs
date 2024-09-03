@@ -8,9 +8,7 @@ public class MusicManager : MonoBehaviour
 {
     public AudioSource sfxAudio;
     public List<AudioSource> musicAudioList;
-    public AudioMixer mixer;
-    public AudioMixerSnapshot snapFadeIn;
-    public AudioMixerSnapshot snapFadeOut;
+    public AudioMixerSnapshot snapFadeIn, snapFadeOut;
 
     #region instance
     public static MusicManager instance;
@@ -26,13 +24,12 @@ public class MusicManager : MonoBehaviour
         snapFadeOut.TransitionTo(0.01f);
     }
 
-    public void sfxVolume(Slider slider)
+    public void OptionSlider_VolumeSFX(Slider slider)
     {
         float val = slider.value;
         sfxAudio.volume = val * 0.08f * 2;
     }
-
-    public void musicVolume(Slider slider)
+    public void OptionSlider_VolumeMusic(Slider slider)
     {
         float val = slider.value;
         foreach (AudioSource s in musicAudioList)
@@ -41,12 +38,12 @@ public class MusicManager : MonoBehaviour
         }
     }
 
-    public void mixerFadeOut()
-    {
-        snapFadeOut.TransitionTo(2.5f);
-    }
-    public void mixerFadeIn()
+    public void Btn_MixerIn()
     {
         snapFadeIn.TransitionTo(1f);
+    }
+    public void Btn_MixerOut()
+    {
+        snapFadeOut.TransitionTo(2.5f);
     }
 }

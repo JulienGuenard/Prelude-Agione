@@ -28,6 +28,27 @@ public class SaveManager : MonoBehaviour
         CheckSave();
     }
 
+    private void CheckUnlockNarrative()
+    {
+        foreach (Unlock unlock in unlockList)
+        {
+            if (NarrativeManager.instance.storyID != unlock.narrativeUnlock.storyID) return;
+            if (NarrativeManager.instance.narrativeID != unlock.narrativeUnlock.narrativeID) return;
+
+            SetInt(unlock.saveName, 1);
+        }
+    }
+    private void CheckSave()
+    {
+        foreach (Unlock unlock in unlockList)
+        {
+            bool unlocked = GetInt(unlock.saveName) == 1;
+
+            unlock.btn_on.SetActive(unlocked);
+            unlock.btn_off.SetActive(!unlocked);
+        }
+    }
+
     private void SaveReset()
     {
         PlayerPrefs.DeleteAll();
@@ -46,26 +67,5 @@ public class SaveManager : MonoBehaviour
     private int GetInt(string KeyName)
     {
         return PlayerPrefs.GetInt(KeyName);
-    }
-
-    public void CheckUnlockNarrative()
-    {
-        foreach (Unlock unlock in unlockList)
-        {
-            if (NarrativeManager.instance.storyID != unlock.narrativeUnlock.storyID)            return;
-            if (NarrativeManager.instance.narrativeID != unlock.narrativeUnlock.narrativeID)    return;
-
-            SetInt(unlock.saveName, 1);
-        }
-    }
-    public void CheckSave()
-    {
-        foreach(Unlock unlock in unlockList)
-        {
-            bool unlocked = GetInt(unlock.saveName) == 1;
-
-            unlock.btn_on.SetActive(unlocked);
-            unlock.btn_off.SetActive(!unlocked);
-        }
     }
 }

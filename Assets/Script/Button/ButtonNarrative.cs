@@ -5,11 +5,11 @@ using UnityEngine;
 public class ButtonNarrative : MonoBehaviour
 {
     public bool startNarrative;
-    public int id;
+    public int storyID;
 
     private void OnMouseDown()
     {
-        if (startNarrative) MenuManager.instance.NarrativeStart(id);
-        else MenuManager.instance.NarrativeStop();
+        if (startNarrative) MenuManager.instance.Btn_NarrativeStart(storyID);
+        else                MenuManager.instance.Btn_NarrativeStop();
     }
 }

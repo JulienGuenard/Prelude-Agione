@@ -7,9 +7,17 @@ using UnityEngine;
 public class NarrativeManager : MonoBehaviour
 {
     public int storyID;
+    public int narrativeID; int NarrativeID
+    {
+        get { return narrativeID; }
+        set
+        {
+            narrativeID = value;
+            NarrativeActive = narrativeObjList[narrativeID];
+        }
+    }
 
-    public bool isPlayed;
-    bool IsPlayed
+    public bool isPlayed; bool IsPlayed
     {
         get { return isPlayed; }
         set
@@ -19,31 +27,16 @@ public class NarrativeManager : MonoBehaviour
             pauseGMB.SetActive(isPlayed);
         }
     }
-    public GameObject playGMB;
-    public GameObject pauseGMB;
+    public GameObject playGMB, pauseGMB;
 
     public Animator screenFade;
 
     GameObject sceneNarrativeGMB;
 
-    public List<NarrativeObj> storyAdalise;
-    public List<NarrativeObj> storyGideon;
-
-    public List<NarrativeObj> narrativeObjList;
+    public  List<NarrativeObj> storyAdalise, storyGideon;
+    private List<NarrativeObj> narrativeObjList = new List<NarrativeObj>();
     
-    public int  narrativeID;
-    int         NarrativeID
-    {
-        get { return narrativeID; }
-        set
-        {
-            narrativeID = value;
-            NarrativeActive = narrativeObjList[narrativeID];
-        }
-    }
-    
-    NarrativeObj narrativeActive;
-    NarrativeObj NarrativeActive 
+    NarrativeObj narrativeActive; NarrativeObj NarrativeActive 
     {  
         get { return narrativeActive; } 
         set 
@@ -119,44 +112,27 @@ public class NarrativeManager : MonoBehaviour
         for(int i = 0; i < bubbleList.Count; i++)
         {
             string txt = narrativeActive.dialogList[i].txt;
+            VoiceObj voice = narrativeActive.dialogList[i].dialogVoicePreset;
+            DialogStruct dialog;
 
-            AudioClip sfx;
-            float pitch;
-            float pitchRand;
-            float speed;
-            float spaceDelay;
-            float virguleDelay;
-            float pointDelay;
-            float bubbleDelay;
+            if (voice == null)  dialog = narrativeActive.dialogList[i];
+            else                dialog = narrativeActive.dialogList[i].dialogVoicePreset.dialogStruct;
+
+            AudioClip sfx = dialog.sfx;
+            float pitch = dialog.pitch;
+            float pitchRand = dialog.pitchRand;
+            float speed = dialog.speed;
+            float spaceDelay = dialog.spaceDelay;
+            float virguleDelay = dialog.virguleDelay;
+            float pointDelay = dialog.pointDelay;
+            float bubbleDelay = dialog.bubbleDelay;
             int hideNumber = narrativeActive.dialogList[i].hideNumber;
-
-            if (narrativeActive.dialogList[i].dialogVoicePreset == null)
-            {
-                 sfx = narrativeActive.dialogList[i].sfx;
-                 pitch = narrativeActive.dialogList[i].pitch;
-                 pitchRand = narrativeActive.dialogList[i].pitchRand;
-                 speed = narrativeActive.dialogList[i].speed;
-                 spaceDelay = narrativeActive.dialogList[i].spaceDelay;
-                 virguleDelay = narrativeActive.dialogList[i].virguleDelay;
-                 pointDelay = narrativeActive.dialogList[i].pointDelay;
-                 bubbleDelay = narrativeActive.dialogList[i].bubbleDelay;
-            }else
-            {
-                sfx = narrativeActive.dialogList[i].dialogVoicePreset.dialogStruct.sfx;
-                pitch = narrativeActive.dialogList[i].dialogVoicePreset.dialogStruct.pitch;
-                pitchRand = narrativeActive.dialogList[i].dialogVoicePreset.dialogStruct.pitchRand;
-                speed = narrativeActive.dialogList[i].dialogVoicePreset.dialogStruct.speed;
-                spaceDelay = narrativeActive.dialogList[i].dialogVoicePreset.dialogStruct.spaceDelay;
-                virguleDelay = narrativeActive.dialogList[i].dialogVoicePreset.dialogStruct.virguleDelay;
-                pointDelay = narrativeActive.dialogList[i].dialogVoicePreset.dialogStruct.pointDelay;
-                bubbleDelay = narrativeActive.dialogList[i].dialogVoicePreset.dialogStruct.bubbleDelay;
-            }
 
             for (int x = 1; x < txt.Length + 1; x++)
             {
                 yield return new WaitForSeconds(speed);
 
-                if (txt.Substring(x).StartsWith("<"))
+                if (txt.Substring(x).StartsWith("<")) 
                 {
                     x += 4;
                     yield return new WaitForSeconds(0.1f);
@@ -165,28 +141,23 @@ public class NarrativeManager : MonoBehaviour
 
                 bubbleList[i].text = txt.Insert(x, "<color=#00000000>");
                 MusicManager.instance.sfxAudio.pitch = Random.Range(pitch - pitchRand, pitch + pitchRand);
+
                 if (txt.Substring(x-1).StartsWith(" "))
                 {
                     yield return new WaitForSeconds(spaceDelay);
                     continue;
                 }
-
                 if (txt.Substring(x-1).StartsWith(","))
                 {
                     yield return new WaitForSeconds(virguleDelay);
                     continue;
                 }
-
                 if (txt.Substring(x-1).StartsWith("."))
                 {
                     yield return new WaitForSeconds(pointDelay);
                     continue;
                 }
-
-                if (x >= txt.Length)
-                {
-                    continue;
-                }
+                if (x >= txt.Length) continue;
 
                 MusicManager.instance.sfxAudio.PlayOneShot(sfx);
             }

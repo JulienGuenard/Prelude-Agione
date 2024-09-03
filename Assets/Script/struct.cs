@@ -5,24 +5,16 @@ using UnityEngine;
     public string txt;
     public VoiceObj dialogVoicePreset;
     public AudioClip sfx;
-    public float speed;
-    public float pitch;
-    public float pitchRand;
-    public float spaceDelay;
-    public float virguleDelay;
-    public float pointDelay;
-    public float bubbleDelay;
+    public float speed, pitch, pitchRand, spaceDelay, virguleDelay, pointDelay, bubbleDelay;
     public int hideNumber;
 }
 [System.Serializable] public struct NarrativeUnlock
 {
-    public int storyID;
-    public int narrativeID;
+    public int storyID, narrativeID;
 }
 [System.Serializable] public struct Unlock
 {
     public string saveName;
     public NarrativeUnlock narrativeUnlock;
-    public GameObject btn_on;
-    public GameObject btn_off;
+    public GameObject btn_on, btn_off;
 }

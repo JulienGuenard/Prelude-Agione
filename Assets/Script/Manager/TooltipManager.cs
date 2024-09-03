@@ -6,16 +6,13 @@ using UnityEngine;
 public class TooltipManager : MonoBehaviour
 {
     public GameObject tooltipGMB_0;
-    public TextMeshPro tooltipGMB_0_title;
-    public TextMeshPro tooltipGMB_0_text;
+    public TextMeshPro tooltipGMB_0_title, tooltipGMB_0_text;
 
     public GameObject tooltipGMB_1;
-    public TextMeshPro tooltipGMB_1_title;
-    public TextMeshPro tooltipGMB_1_text;
+    public TextMeshPro tooltipGMB_1_title, tooltipGMB_1_text;
 
     public GameObject tooltipGMB_2;
-    public TextMeshPro tooltipGMB_2_title;
-    public TextMeshPro tooltipGMB_2_text;
+    public TextMeshPro tooltipGMB_2_title, tooltipGMB_2_text;
 
     #region instance
     public static TooltipManager instance;
@@ -28,30 +25,18 @@ public class TooltipManager : MonoBehaviour
 
     public void Tooltip(string title, string text)
     {
-        if (text.Length < 2) Tooltip_0(title, text);
-        else if (text.Length < 100) Tooltip_1(title, text);
-        else Tooltip_2(title, text);
+        HideTooltips();
+
+        if      (text.Length < 2)   Tooltip(title, text, tooltipGMB_0, tooltipGMB_0_title, tooltipGMB_0_text);
+        else if (text.Length < 100) Tooltip(title, text, tooltipGMB_1, tooltipGMB_1_title, tooltipGMB_1_text);
+        else                        Tooltip(title, text, tooltipGMB_2, tooltipGMB_2_title, tooltipGMB_2_text);
     }
 
-    void Tooltip_0(string title, string text)
+    void Tooltip(string title, string text, GameObject gmb, TextMeshPro tooltipTitle, TextMeshPro tooltipText)
     {
-        tooltipGMB_0.SetActive(true);
-        tooltipGMB_0_title.text = title;
-        tooltipGMB_0_text.text = text;
-    }
-
-    void Tooltip_1(string title, string text)
-    {
-        tooltipGMB_1.SetActive(true);
-        tooltipGMB_1_title.text = title;
-        tooltipGMB_1_text.text = text;
-    }
-
-    void Tooltip_2(string title, string text)
-    {
-        tooltipGMB_2.SetActive(true);
-        tooltipGMB_2_title.text = title;
-        tooltipGMB_2_text.text = text;
+        gmb.SetActive(true);
+        tooltipTitle.text = title;
+        tooltipText.text = text;
     }
 
     public void HideTooltips()

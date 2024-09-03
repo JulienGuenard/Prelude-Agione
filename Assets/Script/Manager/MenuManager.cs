@@ -5,11 +5,9 @@ using UnityEngine;
 public class MenuManager : MonoBehaviour
 {
     public Animator screenFade;
-    public GameObject menuCurrent;
+    public GameObject menuCurrent, previousGMB, mangaPanelGMB, menuOption;
+
     GameObject previousMenu;
-    public GameObject previousGMB;
-    public GameObject mangaPanelGMB;
-    public GameObject menuOption;
 
     #region instance
     public static MenuManager instance;
@@ -20,47 +18,35 @@ public class MenuManager : MonoBehaviour
     }
     #endregion
 
-    public void PreviousMenu()
-    {
-        screenFade.SetBool("Fade", true);
-        StartCoroutine(Fade(previousMenu));
-    }
-    public void ChangeMenu(GameObject menuGMB)
+    public void Btn_ChangeMenu(GameObject menuGMB)
     {
         if (menuGMB == null) return;
 
-        screenFade.SetBool("Fade", true);
-        StartCoroutine(Fade(menuGMB));
+        FadeManager.instance.Menu_FadeIn(menuGMB);
     }
-    IEnumerator Fade(GameObject menuGMB)
-    {
-        
-        yield return new WaitForSeconds(1f);
-        TooltipManager.instance.HideTooltips();
-        menuCurrent.SetActive(false);
-        menuGMB.SetActive(true);
-        previousMenu = menuCurrent;
-        menuCurrent = menuGMB;
-        if (previousGMB != null) previousGMB.SetActive(true);
-        screenFade.SetBool("Fade", false);
-    }
-
-    public void NarrativeStart(int id)
+    public void Btn_NarrativeStart(int id)
     {
         TooltipManager.instance.HideTooltips();
         NarrativeManager.instance.StartNarrative(id);
         mangaPanelGMB.SetActive(true);
     }
-
-    public void NarrativeStop()
+    public void Btn_NarrativeStop()
     {
         TooltipManager.instance.HideTooltips();
         NarrativeManager.instance.StopNarrative();
         mangaPanelGMB.SetActive(false);
     }
-
-    public void Options()
+    public void Btn_Options()
     {
         menuOption.SetActive(!menuOption.activeInHierarchy);
+    }
+
+    public void Fade_ChangeMenu(GameObject menuGMB)
+    {
+        menuCurrent.SetActive(false);
+        menuGMB.SetActive(true);
+        previousMenu = menuCurrent;
+        menuCurrent = menuGMB;
+        if (previousGMB != null) previousGMB.SetActive(true);
     }
 }

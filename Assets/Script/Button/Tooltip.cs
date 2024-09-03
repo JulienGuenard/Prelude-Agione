@@ -4,8 +4,8 @@ using UnityEngine;
 
 public class Tooltip : MonoBehaviour
 {
-    public string title;
-    [TextArea] public string text;
+                public string title;
+    [TextArea]  public string text;
 
     public void OnMouseEnter()
     {

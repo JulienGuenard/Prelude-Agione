@@ -5,14 +5,13 @@ using UnityEngine;
 public class Button : MonoBehaviour
 {
     public GameObject menuGMB;
-    public bool musicFadeOut;
-    public bool musicFadeIn;
+    public bool musicFadeOut, musicFadeIn;
 
     private void OnMouseDown()
     {
-        MenuManager.instance.ChangeMenu(menuGMB);
+        MenuManager.instance.Btn_ChangeMenu(menuGMB);
 
-        if (musicFadeOut) MusicManager.instance.mixerFadeOut();
-        if (musicFadeIn) MusicManager.instance.mixerFadeIn();
+        if (musicFadeOut)   MusicManager.instance.Btn_MixerOut();
+        if (musicFadeIn)    MusicManager.instance.Btn_MixerIn();
     }
 }

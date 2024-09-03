@@ -19,4 +19,18 @@ public class FadeManager : MonoBehaviour
     {
         screenFade.gameObject.SetActive(true);
     }
+
+    public void Menu_FadeIn(GameObject menuGMB)
+    {
+        screenFade.SetBool("Fade", true);
+        StartCoroutine(Menu_FadeOut(menuGMB));
+    }
+
+    private IEnumerator Menu_FadeOut(GameObject menuGMB)
+    {
+        yield return new WaitForSeconds(1f);
+        TooltipManager.instance.HideTooltips();
+        MenuManager.instance.Fade_ChangeMenu(menuGMB);
+        screenFade.SetBool("Fade", false);
+    }
 }
